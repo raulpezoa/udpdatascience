@@ -6,6 +6,9 @@
 #' @return Lista con sensibilidad y especificidad promedio en conjunto de validacion
 #' @export 
 ValidacionCruzadaglm <- function(formula,ncapas,specificity,df){
+  library(scales)
+  library(data.table)
+  library(ROCR)
   #recuperamos var dependiente
   vardepend <- as.character(formula)[2]
   #desordenamos data aleatoriamente
