@@ -1,4 +1,4 @@
-#' Grafica frontera de decision para regresion logistica en dos variables
+#' Obtiene probabilidad de corte para especifidad determinada
 #' @param modelo Objeto glm 
 #' @param data Dataframe con datos
 #' @param spec Especificidad buscada

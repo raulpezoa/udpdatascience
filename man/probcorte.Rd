@@ -2,7 +2,7 @@
 % Please edit documentation in R/probcorte.R
 \name{probcorte}
 \alias{probcorte}
-\title{Grafica frontera de decision para regresion logistica en dos variables}
+\title{Obtiene probabilidad de corte para especifidad determinada}
 \usage{
 probcorte(modelo, data, spec)
 }
@@ -17,5 +17,5 @@ probcorte(modelo, data, spec)
 Curva ROC, AUC y probabilidad de corte
 }
 \description{
-Grafica frontera de decision para regresion logistica en dos variables
+Obtiene probabilidad de corte para especifidad determinada
 }
