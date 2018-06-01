@@ -1,0 +1,11 @@
+Package: udpdatascience
+Title: Funciones para curso CII3427 - UDP
+Version: 0.1
+Authors: Raul Pezoa
+Description: What the package does (one paragraph).
+Depends: R (>= 3.4.0)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Imports: ROCR
