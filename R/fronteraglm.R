@@ -5,6 +5,9 @@
 #' @return Grafico con frontera de decision
 #' @export 
 fronteraglm <- function(modelo,data,prob){
+  library(ROCR)
+  library(data.table)
+  library(scales)
   if (length(modelo$coefficients)!=3) {
     stop("Funciona para modelo con dos predictores")
   }
