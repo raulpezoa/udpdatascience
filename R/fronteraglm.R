@@ -10,6 +10,8 @@ fronteraglm <- function(modelo,data,prob){
   suppressMessages(library(data.table))
   suppressMessages(library(scales))
   options(warn=0)
+  
+  data <- data.table(data)
   if (length(modelo$coefficients)!=3) {
     stop("Funciona para modelo con dos predictores")
   }
