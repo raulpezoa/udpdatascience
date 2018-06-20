@@ -19,9 +19,6 @@ ValidacionCruzadaglm <- function(formula,ncapas,specificity,data){
   #Creamos n capas iguales
   capas <- crearCapas(data$y,k=ncapas,list=F)
   
-  #Creamos n capas iguales
-  capas <- cut(seq(1,nrow(data)),breaks=ncapas,labels=FALSE)
-  
   #creamos vector donde guardaremos resultados
   lista.sensitivity <- vector()
   lista.specificity <- vector()
