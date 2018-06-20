@@ -4,9 +4,9 @@
 #' @return Grafico con frontera de decision
 #' @export 
 fronterasvm <- function(modelo,data){
-  library(e1071)
-  library(data.table)
-  library(scales)
+  suppressMessages(library(e1071))
+  suppressMessages(library(data.table))
+  suppressMessages(library(scales))
   data=data.table(data)
   if (length(attr(modelo$terms,"term.labels"))!=2) {
     stop("Funciona para modelo con dos predictores")

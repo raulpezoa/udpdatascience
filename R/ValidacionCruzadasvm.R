@@ -9,8 +9,8 @@
 #' @return Lista con sensibilidad y especificidad promedio en conjunto de validacion
 #' @export 
 ValidacionCruzadasvm <- function(formula,ncapas,data,cost=1,gamma=1,kernel="radial",degree=3){
-  library(e1071)
-  library(data.table)
+  suppressMessages(library(e1071))
+  suppressMessages(library(data.table))
   #recuperamos var dependiente
   vardepend <- as.character(formula)[2]
   data <- data.table(data)
