@@ -5,9 +5,11 @@
 #' @return Curva ROC, AUC y probabilidad de corte
 #' @export 
 probcorte <- function(modelo,data,spec){
+  options(warn=-1)
   suppressMessages(library(ROCR))
   suppressMessages(library(data.table))
   suppressMessages(library(scales))
+  options(warn=0)
   data <- data.table(data)
   y=all.vars(formula(modelo))[1]
   data$y <- unlist(data[,y,with=F])

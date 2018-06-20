@@ -5,9 +5,11 @@
 #' @return Grafico con frontera de decision
 #' @export 
 fronteraglm <- function(modelo,data,prob){
+  options(warn=-1)
   suppressMessages(library(ROCR))
   suppressMessages(library(data.table))
   suppressMessages(library(scales))
+  options(warn=0)
   if (length(modelo$coefficients)!=3) {
     stop("Funciona para modelo con dos predictores")
   }
