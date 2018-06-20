@@ -8,6 +8,7 @@ probcorte <- function(modelo,data,spec){
   library(ROCR)
   library(data.table)
   library(scales)
+  data <- data.table(data)
   y=all.vars(formula(modelo))[1]
   data$y <- unlist(data[,y,with=F])
   predprob <- predict(modelo,data,type='response')
