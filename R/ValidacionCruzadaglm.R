@@ -10,7 +10,6 @@ ValidacionCruzadaglm <- function(formula,ncapas,specificity,data){
   suppressMessages(library(ROCR))
   suppressMessages(library(data.table))
   suppressMessages(library(scales))
-  options(warn=0)
   #recuperamos var dependiente
   vardepend <- as.character(formula)[2]
 
@@ -46,6 +45,7 @@ ValidacionCruzadaglm <- function(formula,ncapas,specificity,data){
     lista.sensitivity <- c(lista.sensitivity,sensitivity.val)
     lista.specificity <- c(lista.specificity,specificity.val)
   }
+  options(warn=0)
   return(list(mean.sensitivity=mean(lista.sensitivity),mean.specificity=mean(lista.specificity)))
 }
 
