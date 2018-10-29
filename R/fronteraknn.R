@@ -12,7 +12,7 @@ fronteraknn <- function(modelo,data,prob){
   options(warn=0)
   
   data <- data.table(data)
-  if (length(modelo$coefficients)!=3) {
+  if (nrow(attr(modelo$terms,"factors"))!=3) {
     stop("Funciona para modelo con dos predictores")
   }
   
