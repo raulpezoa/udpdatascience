@@ -3,5 +3,6 @@
 export(ValidacionCruzadaglm)
 export(ValidacionCruzadasvm)
 export(fronteraglm)
+export(fronteraknn)
 export(fronterasvm)
 export(probcorte)

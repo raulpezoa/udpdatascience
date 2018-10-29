@@ -4,7 +4,7 @@
 \alias{probcorte}
 \title{Obtiene probabilidad de corte para especifidad determinada}
 \usage{
-probcorte(modelo, data, spec)
+probcorte(modelo, data, spec, tipo = "glm")
 }
 \arguments{
 \item{modelo}{Objeto glm}
