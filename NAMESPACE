@@ -2,7 +2,7 @@
 
 export(ValidacionCruzadaglm)
 export(ValidacionCruzadasvm)
+export(formulaglm)
 export(fronteraglm)
-export(fronteraknn)
 export(fronterasvm)
 export(probcorte)

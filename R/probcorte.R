@@ -4,7 +4,7 @@
 #' @param spec Especificidad buscada
 #' @return Curva ROC, AUC y probabilidad de corte
 #' @export 
-probcorte <- function(modelo,data,spec,tipo="glm"){
+probcorte <- function(modelo,data,spec,tipo="glm",grafico=T){
   options(warn=-1)
   suppressMessages(library(ROCR))
   suppressMessages(library(data.table))
@@ -17,8 +17,9 @@ probcorte <- function(modelo,data,spec,tipo="glm"){
     predprob <- predict(modelo,data,type='response')
     pr <- prediction(predprob, data$y)
     perf <- performance(pr, measure = "sens", x.measure = "spec")
-    plot(perf)
-    
+    if (grafico){
+      plot(perf)
+    }
     cutoffs <- data.frame(cut=perf@alpha.values[[1]], spec=perf@x.values[[1]], 
                           sens=perf@y.values[[1]])
     prob <- cutoffs[cutoffs$spec<=spec,]
@@ -33,7 +34,9 @@ probcorte <- function(modelo,data,spec,tipo="glm"){
     predprob <- predict(modelo,data,type='prob')[,2]
     pr <- prediction(predprob, data$y)
     perf <- performance(pr, measure = "sens", x.measure = "spec")
-    plot(perf)
+    if (grafico){
+      plot(perf)
+    }
     
     cutoffs <- data.frame(cut=perf@alpha.values[[1]], spec=perf@x.values[[1]], 
                           sens=perf@y.values[[1]])
