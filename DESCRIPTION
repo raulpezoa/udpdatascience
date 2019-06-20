@@ -3,7 +3,13 @@ Title: Funciones para curso CII3427 - UDP
 Version: 0.1
 Authors: Raul Pezoa
 Description: What the package does (one paragraph).
-Depends: R (>= 3.1.2)
+Depends: R (>= 3.1.2),
+    caret,
+    data.table,
+    rpart,
+    rattle,
+    randomForest,
+    e1071
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
