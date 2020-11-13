@@ -18,12 +18,6 @@ ValidacionCruzadaglm(formula, ncapas, specificity, data)
 \item{data}{Set de datos}
 
 \item{df}{Set de datos}
-
-\item{formula}{formula del modelo glm}
-
-\item{ncapas}{Numero de capas a usar}
-
-\item{specificity}{Especificidad (1-falsos positivos) a fijar en el set de entrenamiento para encontrar probabilidad de corte}
 }
 \value{
 Lista con sensibilidad y especificidad promedio en conjunto de validacion

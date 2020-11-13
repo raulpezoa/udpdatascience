@@ -4,8 +4,15 @@
 \alias{ValidacionCruzadasvm}
 \title{Realiza validacion cruzada de k capas para un modelo svm}
 \usage{
-ValidacionCruzadasvm(formula, ncapas, data, cost = 1, gamma = 1,
-  kernel = "radial", degree = 3)
+ValidacionCruzadasvm(
+  formula,
+  ncapas,
+  data,
+  cost = 1,
+  gamma = 1,
+  kernel = "radial",
+  degree = 3
+)
 }
 \arguments{
 \item{formula}{formula del modelo svm}
